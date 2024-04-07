@@ -1,0 +1,18 @@
+typescript 사용 이유
+TypeScript는 기존 JavaScript가 동적 타입 언어로써 코드가 실행될 때 타입 에러가 발생할 가능성이 있기 때문에 나온 언어다. 
+TypeScript는 크게 2가지 기능을 제공한다.
+타입체크
+컴파일
+
+
+
+
+TypeScript를 사용해 개발 하는 단계는 크게 3가지로 나눌 수 있다.
+
+Lint stage
+Compile stage
+Runtime stage
+
+
+tsc : 타입스크립트 컴파일러
+tsserver : 개발시에도 타입 체킹
