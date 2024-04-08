@@ -118,6 +118,11 @@ h3 {
   overflow: hidden;
   background-color: #ccccccb8;
 } */
+
+.modal-icon {
+  cursor: pointer;
+}
+
 .modal-inner-image {
   width: 100%; /* 또는 원하는 크기 */
   height: auto; /* 비율 유지 */

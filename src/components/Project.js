@@ -26,7 +26,6 @@ const Project = () => {
             <article
               className="flex flex-wrap md:justify-between md:items-center"
               key={index}
-              onClick={() => openModal(index)}
             >
               <picture
                 className={
@@ -72,6 +71,14 @@ const Project = () => {
                   ))}
                 </div>
                 <div className="w-auto flex space-x-5 relative">
+                  <div className="modal-icon" onClick={() => openModal(index)}>
+                    <img
+                      src="./images/icons/modal.svg"
+                      alt="link to modal"
+                      width="24px"
+                      height="24px"
+                    />
+                  </div>
                   <a href={project.github} target="_blank" rel="noreferrer">
                     <img
                       src="./images/icons/github.svg"
@@ -82,7 +89,7 @@ const Project = () => {
                   </a>
                   <a href={project.link} target="_blank" rel="noreferrer">
                     <img
-                      src="./images/icons/external-link.svg"
+                      src="./images/icons/house.svg"
                       alt="link to live website"
                       width="24px"
                       height="24px"
