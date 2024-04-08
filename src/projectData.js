@@ -185,6 +185,7 @@ const projects = [
           "1. 개발환경과 배포환경에서의 proxy 차이",
           "2. CICD 구현 중, 빌드&테스트패키지 설정을 통해 지속적 배포 개념을 직접 체험",
           "3. Azure 서버 활용 과정에서 port 1개만 노출이 가능한 점을 해결하며, Azure의 App service는 PAAS에 가까운 서비스임을 경험",
+          "4. UI 템플릿 수정 과정에서 react-router 버전 차이 학습. 배포환경에서의 Browser router dom 동작 확인",
         ],
       },
     ],

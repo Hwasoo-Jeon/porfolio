@@ -68,7 +68,7 @@ function ProjectModal() {
                   <div className="modal-inner-left">
                     <picture>
                       <source srcSet={`${page.image}-1280.svg 1280w`} />
-                      <img className="modal-inner-image rounded-lg" alt="" />
+                      <img className="modal-inner-image" alt="" />
                     </picture>
                   </div>
                   <div className="modal-inner-right">
@@ -130,7 +130,7 @@ function ProjectModal() {
                   <div className="modal-inner-left">
                     <picture>
                       <source srcSet={`${page.image}-1280.svg 1280w`} />
-                      <img className="modal-inner-image rounded-lg" alt="" />
+                      <img className="modal-inner-image" alt="" />
                     </picture>
                   </div>
                   <div className="modal-inner-right">
@@ -178,7 +178,7 @@ function ProjectModal() {
                   <div className="modal-inner-left">
                     <picture>
                       <source srcSet={`${page.image}-1280.svg 1280w`} />
-                      <img className="modal-inner-image rounded-lg" alt="" />
+                      <img className="modal-inner-image" alt="" />
                     </picture>
                   </div>
                   <div className="modal-inner-right">
