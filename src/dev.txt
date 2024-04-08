@@ -16,3 +16,9 @@ Runtime stage
 
 tsc : 타입스크립트 컴파일러
 tsserver : 개발시에도 타입 체킹
+
+==
+깃페이지 기능
+참고용 문서 : https://enne.tistory.com/10
+npm install gh-pages -d
+
