@@ -357,7 +357,7 @@ textarea {
     margin: auto;
   }
   .ReactModal__Content--after-open {
-    height: 80% !important;
+    height: 90% !important;
     padding-top: 0.5rem !important;
   }
 
