@@ -1,5 +1,5 @@
 import React from "react";
-
+const publicUrl = process.env.PUBLIC_URL;
 const Skill = () => {
   return (
     <section className="my-28  px-5">
@@ -14,7 +14,7 @@ const Skill = () => {
           aria-label="Spring FW & Boot"
         >
           <img
-            src="./images/icons/springframework-original.svg"
+            src={`${publicUrl}/images/icons/springframework-original.svg`}
             alt="Spring FW & Boot"
             loading="lazy"
             className="w-16 mb-1"
@@ -30,7 +30,7 @@ const Skill = () => {
           aria-label="React Js"
         >
           <img
-            src="./images/icons/react-original.svg"
+            src={`${publicUrl}/images/icons/react-original.svg`}
             alt=""
             loading="lazy"
             className="w-16 mb-1"
@@ -46,7 +46,7 @@ const Skill = () => {
           aria-label="Javascript"
         >
           <img
-            src="./images/icons/javascript-original.svg"
+            src={`${publicUrl}/images/icons/javascript-original.svg`}
             alt="Javascript"
             loading="lazy"
             className="w-16 mb-1"
@@ -62,7 +62,7 @@ const Skill = () => {
           aria-label="MariaDB"
         >
           <img
-            src="./images/icons/mariadb-original.svg"
+            src={`${publicUrl}/images/icons/mariadb-original.svg`}
             alt="MariaDB"
             loading="lazy"
             className="w-16 mb-1"
@@ -78,7 +78,7 @@ const Skill = () => {
           aria-label="AWS"
         >
           <img
-            src="./images/icons/aws-original.svg"
+            src={`${publicUrl}/images/icons/aws-original.svg`}
             alt="AWS"
             loading="lazy"
             className="w-16 mb-1"
@@ -94,7 +94,7 @@ const Skill = () => {
           aria-label="Azure"
         >
           <img
-            src="./images/icons/azure-original.svg"
+            src={`${publicUrl}/images/icons/azure-original.svg`}
             alt="Azure"
             loading="lazy"
             className="w-16 mb-1"

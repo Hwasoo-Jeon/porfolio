@@ -73,7 +73,7 @@ const Project = () => {
                 <div className="w-auto flex space-x-5 relative">
                   <div className="modal-icon" onClick={() => openModal(index)}>
                     <img
-                      src="./images/icons/modal.svg"
+                      src={`${process.env.PUBLIC_URL}/images/icons/modal.svg`}
                       alt="link to modal"
                       width="24px"
                       height="24px"
@@ -81,7 +81,7 @@ const Project = () => {
                   </div>
                   <a href={project.github} target="_blank" rel="noreferrer">
                     <img
-                      src="./images/icons/github.svg"
+                      src={`${process.env.PUBLIC_URL}/images/icons/github.svg`}
                       alt="link to github page"
                       width="24px"
                       height="24px"
@@ -89,7 +89,7 @@ const Project = () => {
                   </a>
                   <a href={project.link} target="_blank" rel="noreferrer">
                     <img
-                      src="./images/icons/house.svg"
+                      src={`${process.env.PUBLIC_URL}/images/icons/house.svg`}
                       alt="link to live website"
                       width="24px"
                       height="24px"

@@ -114,31 +114,87 @@ h3 {
   text-align: end;
 }
 
-/* .modal {
-  overflow: hidden;
-  background-color: #ccccccb8;
-} */
-
+/*modal library 제외, css 설정*/
+/*바깥 layout*/
+.modal-inner-layout {
+  display: flex;
+}
+.modal-inner-close-btn-layout {
+  display: inline-block;
+  width: 100%;
+}
+.modal-inner-close-btn-icon {
+  font-size: 1.4rem;
+  float: right;
+}
+.modal-inner-close-btn-beneath {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
 .modal-icon {
   cursor: pointer;
 }
-
-.modal-inner-image {
-  width: 100%; /* 또는 원하는 크기 */
-  height: auto; /* 비율 유지 */
-  border-radius: 1rem;
-}
-
 .modal-inner-left {
-  width: 45%;
+  width: 40%;
   float: left;
   box-sizing: border-box;
 }
+.modal-inner-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
 .modal-inner-right {
-  width: 50%;
+  width: 58%;
   float: right;
   box-sizing: border-box;
 }
+
+/* modal 내부 text css*/
+.modal-inner-right-title {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #ffffff;
+  font-size: 1.05rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: 20%;
+}
+.modal-inner-right-description-loop {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #a9abb9;
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 100%;
+}
+.modal-inner-right-description {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #a9abb9;
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 80%;
+}
+
+/* Slider의 indicator 설정 override */
+.slick-slider {
+  width: 100%;
+  height: 100%;
+}
+.slick-dots li.slick-active button:before {
+  color: #ffffff !important;
+}
+.slick-dots li button:before {
+  color: #cccccc !important;
+  font-size: 10px !important;
+  /* line-height: 13px !important; */
+  /* margin-top: 10px; */
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 14px !important;
+}
+
 .patterns {
   background-image: url("./images/bg-effects.png");
   background-position: center;
@@ -276,3 +332,170 @@ textarea {
     opacity: 0;
   }
 }
+
+/* 세로모드 모바일 디바이스 (가로 해상도가 576px 보다 작은 화면에 적용) */
+@media (max-width: 575px) {
+  .modal-inner-close-btn-beneath {
+    flex-direction: column;
+    justify-content: none;
+  }
+  .modal-inner-left,
+  .modal-inner-right {
+    width: 100%;
+    float: none;
+  }
+  .modal-inner-left {
+    order: 1;
+  }
+  .modal-inner-right {
+    order: 2;
+    margin-top: 1rem;
+  }
+  .modal-inner-image {
+    width: 50%;
+    height: auto;
+    margin: auto;
+  }
+  .ReactModal__Content--after-open {
+    height: 80% !important;
+    padding-top: 0.5rem !important;
+  }
+
+  /* modal 내부 text css*/
+  .modal-inner-right-title {
+    font-family: "Noto Sans KR", sans-serif;
+    color: #ffffff;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    width: 30%;
+  }
+  .modal-inner-right-description-loop {
+    font-family: "Noto Sans KR", sans-serif;
+    color: #a9abb9;
+    font-size: 0.7rem;
+    font-weight: 500;
+    width: 100%;
+  }
+  .modal-inner-right-description {
+    font-family: "Noto Sans KR", sans-serif;
+    color: #a9abb9;
+    font-size: 0.7rem;
+    font-weight: 500;
+    width: 80%;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 10px !important;
+  }
+}
+
+/* 가로모드 모바일 디바이스 (가로 해상도가 576px보다 크고 768px 보다 작은 화면에 적용)  */
+@media (min-width: 576px) and (max-width: 767px) {
+  .modal-inner-left {
+    width: 30%;
+    float: left;
+    box-sizing: border-box;
+  }
+  .modal-inner-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+  .modal-inner-right {
+    width: 68%;
+    float: right;
+    box-sizing: border-box;
+  }
+
+  /* modal 내부 text css*/
+  .modal-inner-right-title {
+    font-family: "Noto Sans KR", sans-serif;
+    color: #ffffff;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    width: 30%;
+  }
+  .modal-inner-right-description-loop {
+    font-family: "Noto Sans KR", sans-serif;
+    color: #a9abb9;
+    font-size: 0.7rem;
+    font-weight: 500;
+    width: 100%;
+  }
+  .modal-inner-right-description {
+    font-family: "Noto Sans KR", sans-serif;
+    color: #a9abb9;
+    font-size: 0.7rem;
+    font-weight: 500;
+    width: 80%;
+  }
+
+  .ReactModal__Content--after-open {
+    width: 90% !important;
+    height: 90% !important;
+    padding-top: 0.5rem !important;
+  }
+}
+
+/*태블릿 디바이스 (가로 해상도가 768px보다 크고 991px 보다 작은 화면에 적용)  */
+@media (min-width: 768px) and (max-width: 991px) {
+  .modal-inner-close-btn-beneath {
+    flex-direction: column;
+    justify-content: none;
+  }
+  .modal-inner-left,
+  .modal-inner-right {
+    width: 100%;
+    float: none;
+  }
+  .modal-inner-left {
+    order: 1;
+  }
+  .modal-inner-right {
+    order: 2;
+    margin-top: 1rem;
+  }
+  .modal-inner-image {
+    width: 50%;
+    height: auto;
+    margin: auto;
+  }
+  .ReactModal__Content--after-open {
+    height: 93% !important;
+    padding-top: 0.5rem !important;
+  }
+}
+
+/* 데스크탑 (가로 해상도가 992px보다 크고 1199px 보다 작은 화면에 적용)  */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .modal-inner-close-btn-beneath {
+    flex-direction: column;
+    justify-content: none;
+  }
+  .modal-inner-left,
+  .modal-inner-right {
+    width: 100%;
+    float: none;
+  }
+  .modal-inner-left {
+    order: 1;
+  }
+  .modal-inner-right {
+    order: 2;
+    margin-top: 1rem;
+  }
+  .modal-inner-image {
+    width: 50%;
+    height: auto;
+    margin: auto;
+  }
+  .ReactModal__Content--after-open {
+    height: 93% !important;
+    padding-top: 0.5rem !important;
+  }
+}
+
+/* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용)  */
+/* @media (min-width: 1200px) {...} */

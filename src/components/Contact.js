@@ -38,7 +38,7 @@ const Contact = () => {
               >
                 <span className="flex flex-row items-end p-2 text-sm border border-gray-500 rounded-lg">
                   <img
-                    src="./images/icons/github.svg"
+                    src={`${process.env.PUBLIC_URL}/images/icons/github.svg`}
                     alt=""
                     width="24px"
                     height="24px"

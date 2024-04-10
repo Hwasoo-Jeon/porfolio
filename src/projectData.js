@@ -1,7 +1,7 @@
 const projects = [
   {
     title: "Farm Farm",
-    image: "./images/farmfarm-mockup",
+    image: `${process.env.PUBLIC_URL}/images/farmfarm-mockup`,
     description: "농산물 펀딩 및 경매 플랫폼. 소규모 투자자와 농부와의 만남!",
     tools: ["Spring FW", "MyBatis", "JSP", "MariaDB", "API", "AWS"],
     github: "https://github.com/FarmFarm-1/FarmFarm_Develop",
@@ -9,7 +9,7 @@ const projects = [
     date: "2023.11 ~ 2023.12 (5인)",
     page: [
       {
-        image: "./images/farmfarm",
+        image: `${process.env.PUBLIC_URL}/images/farmfarm`,
         description:
           "팜팜 : 생산비 부담을 줄이고 싶은 농부와 시드머니가 부족한 펀딩 참여자를 위한 농산물 펀딩 및 경매 플랫폼",
         function:
@@ -28,7 +28,7 @@ const projects = [
         ],
       },
       {
-        image: "./images/auction",
+        image: `${process.env.PUBLIC_URL}/images/auction`,
         description: "경매 페이지",
         function: "동일 입찰 제어가 적용된 경매 기능, 찜하기 기능",
         tools: "Spring Transaction & Exception Handler, Javascript",
@@ -39,7 +39,7 @@ const projects = [
         ],
       },
       {
-        image: "./images/plsql",
+        image: `${process.env.PUBLIC_URL}/images/plsql`,
         description: "농산품 프로세스 처리",
         function:
           "펀딩 실패&성공, 농산품 경작상태, 경매 실패&성공, 경매 수익금 정산",
@@ -51,7 +51,7 @@ const projects = [
         ],
       },
       {
-        image: "./images/crops",
+        image: `${process.env.PUBLIC_URL}/images/crops`,
         description: "농작물 시세 일일 누적",
         function: "경매 참여에 유익한 농산물 시세 정보 전달",
         tools: "Spring Scheduler, 한국농수산식품유통공사 API",
@@ -61,14 +61,14 @@ const projects = [
         ],
       },
       {
-        image: "./images/charge",
+        image: `${process.env.PUBLIC_URL}/images/charge`,
         description: "포인트 충전",
         function: "결제 API 사용하여 포인트 충전",
         tools: "PortOne 결제 API, Javascript",
         etc: ["결제 금액 입력 또는 클릭하여 구매할 포인트에 대해 결제"],
       },
       {
-        image: "./images/address",
+        image: `${process.env.PUBLIC_URL}/images/address`,
         description: "계좌 인증 및 등록",
         function: "펀딩 및 경매 수익 분할에 필요한 계좌 인증 및 등록",
         tools: "PortOne 가상계좌 API, Javascript",
@@ -80,7 +80,7 @@ const projects = [
       },
 
       {
-        image: "./images/server",
+        image: `${process.env.PUBLIC_URL}/images/server`,
         description: "배포",
         function: "클라우드를 이용하여 서비스 배포",
         tools: "AWS EC2, Apache2, Tomcat9",
@@ -93,7 +93,7 @@ const projects = [
         ],
       },
       {
-        image: "./images/sweet",
+        image: `${process.env.PUBLIC_URL}/images/sweet`,
         description: "none",
         function: "none",
         tools: "none",
@@ -108,7 +108,7 @@ const projects = [
   },
   {
     title: "Pay Board",
-    image: "./images/payboard-mockup",
+    image: `${process.env.PUBLIC_URL}/images/payboard-mockup`,
     description: "카드 결제 데이터의 분석 및 대시보드",
     tools: ["Spring Boot", "React", "JPA", "MariaDB", "Azure", "CICD"],
     github: "https://github.com/CardVisor/BackEnd",
@@ -116,7 +116,7 @@ const projects = [
     date: "2024.01 ~ 2024.02 (5인)",
     page: [
       {
-        image: "./images/payboard-mockup",
+        image: `${process.env.PUBLIC_URL}/images/payboard-mockup`,
         description:
           "페이보드 : Pay + DashBoard : 신용카드 결제, 고객 및 혜택 관련 데이터를 다양한 차트 이용으로 대시보드 방식의 분석 및 시각화 서비스",
         function:
@@ -131,7 +131,7 @@ const projects = [
         etc: ["혜택 파트"],
       },
       {
-        image: "./images/benefit",
+        image: `${process.env.PUBLIC_URL}/images/benefit`,
         description: "Benefit 군집 데이터",
         function: "결제 데이터 중, Benefit 군집에 대한 분석",
         tools: "JPQL, Javascript, Amchart5, ChakraUI",
@@ -142,7 +142,7 @@ const projects = [
         ],
       },
       {
-        image: "./images/querydsl",
+        image: `${process.env.PUBLIC_URL}/images/querydsl`,
         description: "필터링된 고객의 사용처별 상위 사용율 혜택 제공",
         function: "결제 데이터 중, Benefit 군집에 대한 분석",
         tools: "QueryDsl, Javascript, Amchart5, ChakraUI",
@@ -152,7 +152,7 @@ const projects = [
         ],
       },
       {
-        image: "./images/recommend",
+        image: `${process.env.PUBLIC_URL}/images/recommend`,
         description: "혜택 가치를 금액으로 연간 가치 산출 후, 평가",
         function:
           "Drag&Drop으로 혜택 조합, 조합된 혜택 가치와 신한카드와의 비교 순위 제공",
@@ -165,7 +165,7 @@ const projects = [
         ],
       },
       {
-        image: "./images/cicd",
+        image: `${process.env.PUBLIC_URL}/images/cicd`,
         description: "서비스의 CICD 구현",
         function: "코드의 GitHub merge 부터 Azure 배포 프로세스 구현",
         tools: "GitAction, Docker, Azure Container Registry & App service",
@@ -177,7 +177,7 @@ const projects = [
         ],
       },
       {
-        image: "./images/payboard",
+        image: `${process.env.PUBLIC_URL}/images/payboard`,
         description: "none",
         function: "none",
         tools: "none",

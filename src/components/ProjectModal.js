@@ -17,8 +17,8 @@ const customModalStyles = {
     left: "0",
   },
   content: {
-    width: "70%",
-    height: "60%",
+    width: "80%",
+    height: "70%",
     zIndex: "150",
     position: "absolute",
     top: "50%",
@@ -29,8 +29,12 @@ const customModalStyles = {
     backgroundColor: "rgb(40 40 46 / 90%)",
     overflow: "hidden",
     alignContent: "center",
-    paddingRight: "2rem",
-    paddingLeft: "2rem",
+    boxSizing: "border-box",
+    // padding : "2rem",
+    paddingTop: "0.7rem",
+    paddingBottom: "1.7rem",
+    paddingRight: "1.7rem",
+    paddingLeft: "1.7rem",
     border: "hidden",
   },
 };
@@ -61,61 +65,58 @@ function ProjectModal() {
           curProject.page.map((page, idx) => {
             if (idx === 0) {
               return (
-                <div className="flex md:items-center" key={idx}>
-                  <div className="float-right mb-4">
-                    <span onClick={() => openModal()}>&times;</span>
+                <div className="modal-inner-layout" key={idx}>
+                  <div
+                    className="modal-inner-close-btn-layout"
+                    onClick={() => openModal()}
+                  >
+                    <div className="modal-inner-close-btn-icon">&times;</div>
                   </div>
-                  <div className="modal-inner-left">
-                    <picture>
-                      <source srcSet={`${page.image}-1280.svg 1280w`} />
-                      <img className="modal-inner-image" alt="" />
-                    </picture>
-                  </div>
-                  <div className="modal-inner-right">
-                    <div className="flex mt-4">
-                      <p className="font-sansKR font-normal text-base mr-8">
-                        프로젝트
-                      </p>
-                      <p className="porfolio-description-long w-4/5">
-                        {page.description}
-                      </p>
+                  <div className="modal-inner-close-btn-beneath">
+                    <div className="modal-inner-left">
+                      <picture>
+                        <source srcSet={`${page.image}-1280.svg 1280w`} />
+                        <img className="modal-inner-image" alt="" />
+                      </picture>
                     </div>
-                    <div className="flex mt-4 ">
-                      <p className="font-sansKR font-normal text-base mr-2">
-                        목표 및 특징
-                      </p>
-                      <p className="porfolio-description-long w-4/5">
-                        {page.function}
-                      </p>
-                    </div>
-                    <div className="flex mt-4">
-                      <p className="font-sansKR font-normal text-base mr-3">
-                        서비스 기능
-                      </p>
-                      <div className="w-4/5">
-                        {page.tools.map((content, idx) => (
-                          <p
-                            className="porfolio-description-long text-sm"
-                            key={idx}
-                          >
-                            {content}
-                          </p>
-                        ))}
+                    <div className="modal-inner-right">
+                      <div className="flex">
+                        <p className="modal-inner-right-title">프로젝트</p>
+                        <p className="modal-inner-right-description">
+                          {page.description}
+                        </p>
                       </div>
-                    </div>
-                    <div className="flex mt-4">
-                      <p className="font-sansKR font-normal text-base mr-7">
-                        담당 기능
-                      </p>
-                      <div className="w-4/5">
-                        {page.etc.map((content, idx) => (
-                          <p
-                            className="porfolio-description-long text-sm"
-                            key={idx}
-                          >
-                            {content}
-                          </p>
-                        ))}
+                      <div className="flex mt-2 ">
+                        <p className="modal-inner-right-title">목표 및 특징</p>
+                        <p className="modal-inner-right-description">
+                          {page.function}
+                        </p>
+                      </div>
+                      <div className="flex mt-2">
+                        <p className="modal-inner-right-title">서비스 기능</p>
+                        <div>
+                          {page.tools.map((content, idx) => (
+                            <p
+                              className="modal-inner-right-description-loop"
+                              key={idx}
+                            >
+                              {content}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="flex mt-4">
+                        <p className="modal-inner-right-title">담당 기능</p>
+                        <div>
+                          {page.etc.map((content, idx) => (
+                            <p
+                              className="modal-inner-right-description-loop"
+                              key={idx}
+                            >
+                              {content}
+                            </p>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -123,47 +124,51 @@ function ProjectModal() {
               );
             } else if (idx <= curProject.page.length - 2) {
               return (
-                <div className="flex md:items-center" key={idx}>
-                  <div className="float-right mb-4">
-                    <span onClick={() => openModal()}>&times;</span>
+                <div className="modal-inner-layout" key={idx}>
+                  <div
+                    className="modal-inner-close-btn-layout"
+                    onClick={() => openModal()}
+                  >
+                    <div className="modal-inner-close-btn-icon">&times;</div>
                   </div>
-                  <div className="modal-inner-left">
-                    <picture>
-                      <source srcSet={`${page.image}-1280.svg 1280w`} />
-                      <img className="modal-inner-image" alt="" />
-                    </picture>
-                  </div>
-                  <div className="modal-inner-right">
-                    <div className="flex mt-4">
-                      <p className="font-sansKR font-normal text-xl mr-9">
-                        담당 영역
-                      </p>
-                      <p className="porfolio-description">{page.description}</p>
+                  <div className="modal-inner-close-btn-beneath">
+                    <div className="modal-inner-left">
+                      <picture>
+                        <source srcSet={`${page.image}-1280.svg 1280w`} />
+                        <img className="modal-inner-image" alt="" />
+                      </picture>
                     </div>
-                    <div className="flex mt-4">
-                      <p className="font-sansKR font-normal text-xl mr-9">
-                        담당 기능
-                      </p>
-                      <p className="porfolio-description w-3/4">
-                        {page.function}
-                      </p>
-                    </div>
-                    <div className="flex mt-4">
-                      <p className="font-sansKR font-normal text-xl mr-4">
-                        기술 및 도구
-                      </p>
-                      <p className="porfolio-description">{page.tools}</p>
-                    </div>
-                    <div className="flex mt-4">
-                      <p className="font-sansKR font-normal text-xl mr-9">
-                        기타 사항
-                      </p>
-                      <div className="w-2/3">
-                        {page.etc.map((content, idx) => (
-                          <p className="porfolio-description-long" key={idx}>
-                            {content}
-                          </p>
-                        ))}
+                    <div className="modal-inner-right">
+                      <div className="flex">
+                        <p className="modal-inner-right-title">담당 영역</p>
+                        <p className="modal-inner-right-description">
+                          {page.description}
+                        </p>
+                      </div>
+                      <div className="flex mt-2 ">
+                        <p className="modal-inner-right-title">담당 기능</p>
+                        <p className="modal-inner-right-description">
+                          {page.function}
+                        </p>
+                      </div>
+                      <div className="flex mt-2">
+                        <p className="modal-inner-right-title">기술 및 도구</p>
+                        <p className="modal-inner-right-description">
+                          {page.tools}
+                        </p>
+                      </div>
+                      <div className="flex mt-4">
+                        <p className="modal-inner-right-title">기타사항</p>
+                        <div>
+                          {page.etc.map((content, idx) => (
+                            <p
+                              className="modal-inner-right-description-loop"
+                              key={idx}
+                            >
+                              {content}
+                            </p>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -171,32 +176,39 @@ function ProjectModal() {
               );
             } else {
               return (
-                <div className="flex md:items-center" key={idx}>
-                  <div className="float-right mb-4">
-                    <span onClick={() => openModal()}>&times;</span>
+                <div className="modal-inner-layout" key={idx}>
+                  <div
+                    className="modal-inner-close-btn-layout"
+                    onClick={() => openModal()}
+                  >
+                    <div className="modal-inner-close-btn-icon">&times;</div>
                   </div>
-                  <div className="modal-inner-left">
-                    <picture>
-                      <source srcSet={`${page.image}-1280.svg 1280w`} />
-                      <img className="modal-inner-image" alt="" />
-                    </picture>
-                  </div>
-                  <div className="modal-inner-right">
-                    <div className="flex mt-4">
-                      <p className="font-sansKR font-normal text-xl mr-9">
-                        문제 해결과 회고
-                      </p>
+                  <div className="modal-inner-close-btn-beneath">
+                    <div className="modal-inner-left">
+                      <picture>
+                        <source srcSet={`${page.image}-1280.svg 1280w`} />
+                        <img className="modal-inner-image" alt="" />
+                      </picture>
                     </div>
-                    <div className="flex mt-4">
-                      <p className="font-sansKR font-normal text-xl mr-9">
-                        내용
-                      </p>
-                      <div className="w-2/3">
-                        {page.etc.map((content, idx) => (
-                          <p className="porfolio-description-long" key={idx}>
-                            {content}
-                          </p>
-                        ))}
+                    <div className="modal-inner-right">
+                      <div className="flex">
+                        <p className="modal-inner-right-title">
+                          문제 해결과 느낀점
+                        </p>
+                      </div>
+
+                      <div className="flex mt-4">
+                        <p className="modal-inner-right-title">내용</p>
+                        <div>
+                          {page.etc.map((content, idx) => (
+                            <p
+                              className="modal-inner-right-description-loop"
+                              key={idx}
+                            >
+                              {content}
+                            </p>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
