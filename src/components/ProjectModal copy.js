@@ -63,7 +63,66 @@ function ProjectModal() {
       <Slider {...settings}>
         {curProject &&
           curProject.page.map((page, idx) => {
-            if (idx <= curProject.page.length - 2) {
+            if (idx === 0) {
+              return (
+                <div className="modal-inner-layout" key={idx}>
+                  <div
+                    className="modal-inner-close-btn-layout"
+                    onClick={() => openModal()}
+                  >
+                    <div className="modal-inner-close-btn-icon">&times;</div>
+                  </div>
+                  <div className="modal-inner-close-btn-beneath">
+                    <div className="modal-inner-left">
+                      <picture>
+                        <source srcSet={`${page.image}-1280.svg 1280w`} />
+                        <img className="modal-inner-image" alt="" />
+                      </picture>
+                    </div>
+                    <div className="modal-inner-right">
+                      <div className="flex">
+                        <p className="modal-inner-right-title">프로젝트</p>
+                        <p className="modal-inner-right-description">
+                          {page.description}
+                        </p>
+                      </div>
+                      <div className="flex mt-2 ">
+                        <p className="modal-inner-right-title">목표 및 특징</p>
+                        <p className="modal-inner-right-description">
+                          {page.function}
+                        </p>
+                      </div>
+                      <div className="flex mt-2">
+                        <p className="modal-inner-right-title">서비스 기능</p>
+                        <div>
+                          {page.tools.map((content, idx) => (
+                            <p
+                              className="modal-inner-right-description-loop"
+                              key={idx}
+                            >
+                              {content}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="flex mt-4">
+                        <p className="modal-inner-right-title">담당 기능</p>
+                        <div>
+                          {page.etc.map((content, idx) => (
+                            <p
+                              className="modal-inner-right-description-loop"
+                              key={idx}
+                            >
+                              {content}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            } else if (idx <= curProject.page.length - 2) {
               return (
                 <div className="modal-inner-layout" key={idx}>
                   <div

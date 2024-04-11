@@ -3,29 +3,32 @@ const projects = [
     title: "Farm Farm",
     image: `${process.env.PUBLIC_URL}/images/farmfarm-mockup`,
     description: "농산물 펀딩 및 경매 플랫폼. 소규모 투자자와 농부와의 만남!",
+    purpose:
+      "영농 자금 확보 & 판매 경로 확보 목적 & 투자한 농산물의 경매 수익 분배",
+    function: [
+      "로그인/회원가입(이메일, 휴대폰 인증)",
+      "펀딩 및 경매(상품 등록, 펀딩 및 경매 참여)",
+      "마이페이지(농산물의 경작상태 업로드 및 확인)",
+      "공통기능(포인트 충전, 계좌 등록, 채팅, 펀딩 수익 분배)",
+    ],
+    myfunction: [
+      "경매 및 마이페이지 기능(포인트 충전, 계좌 인증)",
+      "농산품 프로세스의 PL/SQL 작성",
+      "농산물 일일 시세 데이터 누적",
+      "클라우드 배포",
+    ],
     tools: ["Spring FW", "MyBatis", "JSP", "MariaDB", "API", "AWS"],
     github: "https://github.com/FarmFarm-1/FarmFarm_Develop",
     link: "https://farmfarm.duckdns.org/",
     date: "2023.11 ~ 2023.12 (5인)",
     page: [
-      {
-        image: `${process.env.PUBLIC_URL}/images/farmfarm`,
-        description: "팜팜 : 농산물 펀딩 및 경매 플랫폼",
-        function:
-          "영농 자금 확보 & 판매 경로 확보 목적 & 투자한 농산물의 경매 수익 분배",
-        tools: [
-          "로그인/회원가입(이메일, 휴대폰 인증)",
-          "펀딩 및 경매(상품 등록, 펀딩 및 경매 참여)",
-          "마이페이지(농산물의 경작상태 업로드 및 확인)",
-          "공통기능(포인트 충전, 계좌 등록, 채팅, 펀딩 수익 분배)",
-        ],
-        etc: [
-          "경매 및 마이페이지 기능(포인트 충전, 계좌 인증)",
-          "농산품 프로세스의 PL/SQL 작성",
-          "농산물 일일 시세 데이터 누적",
-          "클라우드 배포",
-        ],
-      },
+      // {
+      //   image: `${process.env.PUBLIC_URL}/images/farmfarm`,
+      //   description: "팜팜 : 농산물 펀딩 및 경매 플랫폼",
+
+      //   tools: [],
+      //   etc: [],
+      // },
       {
         image: `${process.env.PUBLIC_URL}/images/auction`,
         description: "경매 페이지",
@@ -109,26 +112,36 @@ const projects = [
     title: "Pay Board",
     image: `${process.env.PUBLIC_URL}/images/payboard-mockup`,
     description: "카드 결제 데이터의 분석 및 대시보드",
+    purpose:
+      "결제 데이터 기반, 데이터의 군집별 인사이트 제공 / 카드사 직원 대상, 인사이트 제공 목적",
+    function: [
+      "메인 : 결제 추이, 사용자 변화, 결제금액 기준 카드 Top5 등",
+      "해외결제 : 국가별 결제 내역의 세계 지도화, 상세 내역 조회",
+      "고객 : 커스텀 필터링 기능(주 사용카드 및 소비처 정보 제공)",
+      "카드 : 카드별 소비 그래프, 요약 데이터 제공, 일대일 카드비교",
+      "혜택 : 상위 사용률 혜택 정보, 혜택 조합 및 혜택 가치에 대한 순위 비교",
+    ],
+    myfunction: ["혜택 파트"],
     tools: ["Spring Boot", "React", "JPA", "MariaDB", "Azure", "CICD"],
     github: "https://github.com/CardVisor/BackEnd",
     link: "https://payboard.azurewebsites.net/main",
     date: "2024.01 ~ 2024.02 (5인)",
     page: [
-      {
-        image: `${process.env.PUBLIC_URL}/images/payboard-mockup`,
-        description:
-          "페이보드 : 카드 결제와 관련된 데이터를 대시보드 방식의 분석 및 시각화 서비스",
-        function:
-          "결제 데이터 기반, 데이터의 군집별 인사이트 제공 / 카드사 직원 대상, 인사이트 제공 목적",
-        tools: [
-          "메인 : 결제 추이, 사용자 변화, 결제금액 기준 카드 Top5 등",
-          "해외결제 : 국가별 결제 내역의 세계 지도화, 상세 내역 조회",
-          "고객 : 커스텀 필터링 기능(주 사용카드 및 소비처 정보 제공)",
-          "카드 : 카드별 소비 그래프, 요약 데이터 제공, 일대일 카드비교",
-          "혜택 : 상위 사용률 혜택 정보, 혜택 조합 및 혜택 가치에 대한 순위 비교",
-        ],
-        etc: ["혜택 파트"],
-      },
+      // {
+      //   image: `${process.env.PUBLIC_URL}/images/payboard-mockup`,
+      //   description:
+      //     "페이보드 : 카드 결제와 관련된 데이터를 대시보드 방식의 분석 및 시각화 서비스",
+      //   function:
+      //     "결제 데이터 기반, 데이터의 군집별 인사이트 제공 / 카드사 직원 대상, 인사이트 제공 목적",
+      //   tools: [
+      //     "메인 : 결제 추이, 사용자 변화, 결제금액 기준 카드 Top5 등",
+      //     "해외결제 : 국가별 결제 내역의 세계 지도화, 상세 내역 조회",
+      //     "고객 : 커스텀 필터링 기능(주 사용카드 및 소비처 정보 제공)",
+      //     "카드 : 카드별 소비 그래프, 요약 데이터 제공, 일대일 카드비교",
+      //     "혜택 : 상위 사용률 혜택 정보, 혜택 조합 및 혜택 가치에 대한 순위 비교",
+      //   ],
+      //   etc: ["혜택 파트"],
+      // },
       {
         image: `${process.env.PUBLIC_URL}/images/benefit`,
         description: "Benefit 군집 데이터",

@@ -37,7 +37,7 @@ h1 {
 }
 
 h3 {
-  font-size: 1.4rem !important; /*style 우선순위 배정*/
+  font-size: 2rem !important; /*style 우선순위 배정*/
   background-color: #8e9ffa;
   background-image: linear-gradient(
     45deg,
@@ -75,7 +75,7 @@ h3 {
   color: #7086fa;
 }
 
-.porfolio-description {
+/* .porfolio-description {
   font-family: "Noto Sans KR", sans-serif;
   color: #adabb9;
   margin-bottom: 0.75rem;
@@ -87,7 +87,7 @@ h3 {
   color: #adabb9;
   margin-bottom: 0.3rem;
   font-size: 0.9rem;
-}
+} */
 
 .hello-left-layout {
   max-width: 50rem;
@@ -114,8 +114,36 @@ h3 {
   text-align: end;
 }
 
+/*main 페이지 project description CSS*/
+.project-description {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+
+.project-description-title {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #ae96e4;
+  font-size: 1.3rem;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-bottom: 0.5rem;
+}
+
+.project-description-content {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 0.1rem;
+  /* margin-left: 2rem; */
+}
+
 /*modal library 제외, css 설정*/
-/*바깥 layout*/
 .modal-inner-layout {
   display: flex;
 }
