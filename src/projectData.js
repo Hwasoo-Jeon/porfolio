@@ -33,7 +33,7 @@ const projects = [
         image: `${process.env.PUBLIC_URL}/images/auction`,
         description: "경매 페이지",
         function: "동일 입찰 제어가 적용된 경매 기능, 찜하기 기능",
-        tools: "Spring Transaction & Exception Handler, Javascript",
+        tools: "Spring Transaction & Exception class, Javascript",
         etc: [
           "경매 참여자의 보유 포인트 및 최고가 입찰 여부 체크 후, 입찰 성공 또는 실패 전달.",
           "입찰 불가능 경우, Runtime Exception을 상속받은 클래스를 정의하여, 입찰 중단 처리.",
@@ -172,7 +172,7 @@ const projects = [
         etc: [
           "React-beautiful-dnd을 사용한 Drag And Drop으로 개별 혜택을 특정 영역으로 이동",
           "개별 혜택의 결제에서 사용된 적용률과 적립율을 기반으로 가치 계산",
-          "혜택 가치 : (해당 혜택이 적용된 건수) * (해당 혜택을 포함한 카드의 총 결제 건수) * 혜택률 * 기준 금액",
+          "혜택 가치 : (해당 혜택이 적용된 건수 / 해당 혜택을 포함한 카드의 총 결제 건수) * 혜택률 * 기준 금액",
           "산출된 연간 혜택 가치를 기존 카드와 순위 비교 후, 신규 카드 제작을 위한 인사이트로 활용",
         ],
       },
