@@ -124,7 +124,7 @@ const projects = [
     ],
     myfunction: ["혜택 파트"],
     tools: ["Spring Boot", "React", "JPA", "MariaDB", "Azure", "CICD"],
-    github: "https://github.com/CardVisor/BackEnd",
+    github: "https://github.com/CardVisor",
     link: "",
     date: "2024.01 ~ 2024.02 (5인)",
     page: [
