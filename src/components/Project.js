@@ -118,14 +118,18 @@ const Project = () => {
                       height="24px"
                     />
                   </a>
-                  <a href={project.link} target="_blank" rel="noreferrer">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/images/icons/house.svg`}
-                      alt="link to live website"
-                      width="24px"
-                      height="24px"
-                    />
-                  </a>
+                  {project.link === "" ? (
+                    <></>
+                  ) : (
+                    <a href={project.link} target="_blank" rel="noreferrer">
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/icons/house.svg`}
+                        alt="link to live website"
+                        width="24px"
+                        height="24px"
+                      />
+                    </a>
+                  )}
                   <div className="border border-gray-500 px-2 py-1 rounded-lg text-sm font-sansKR">
                     {project.date}
                   </div>

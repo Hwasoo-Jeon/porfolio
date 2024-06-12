@@ -33,10 +33,11 @@ const projects = [
         image: `${process.env.PUBLIC_URL}/images/auction`,
         description: "경매 페이지",
         function: "동일 입찰 제어가 적용된 경매 기능, 찜하기 기능",
-        tools: "Spring Transaction & Exception class, Javascript",
+        tools: "Spring Transaction & DB Locking & Exception class, Javascript",
         etc: [
-          "경매 참여자의 보유 포인트 및 최고가 입찰 여부 체크 후, 입찰 성공 또는 실패 전달.",
-          "입찰 불가능 경우, Runtime Exception을 상속받은 클래스를 정의하여, 입찰 중단 처리.",
+          "경매 참여자의 보유 포인트 및 최고가 입찰 여부 체크 후, 입찰 성공 또는 실패 전달",
+          "SELECT FOR UPDATE 사용하여 비관적 Locking과 Trasaction으로 동일 금액 입찰자의 동시성 제어",
+          "입찰 불가능 경우, Runtime Exception을 상속받은 예외 클래스를 정의하여, 입찰 중단 처리",
           "입찰 가능 경우, Transaction으로 point 차감 및 최고 입찰자 등록 진행",
         ],
       },
@@ -124,7 +125,7 @@ const projects = [
     myfunction: ["혜택 파트"],
     tools: ["Spring Boot", "React", "JPA", "MariaDB", "Azure", "CICD"],
     github: "https://github.com/CardVisor/BackEnd",
-    link: "https://payboard.azurewebsites.net/main",
+    link: "",
     date: "2024.01 ~ 2024.02 (5인)",
     page: [
       // {
